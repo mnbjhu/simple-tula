@@ -1,0 +1,24 @@
+start End
+default -
+End 0 -> End 0
+End 1 -> End 1
+End 2 -> End 2
+End 3 -> End 3
+End 4 -> End 4
+End 5 -> End 5
+End 6 -> End 6
+End 7 -> End 7
+End 8 -> End 8
+End 9 -> End 9
+End - <- Inc -
+Inc 0 -> Halt 1
+Inc 1 -> Halt 2
+Inc 2 -> Halt 3
+Inc 3 -> Halt 4
+Inc 4 -> Halt 5
+Inc 5 -> Halt 6
+Inc 6 -> Halt 7
+Inc 7 -> Halt 8
+Inc 8 -> Halt 9
+Inc 9 <- Inc 0
+Inc - <- Error -

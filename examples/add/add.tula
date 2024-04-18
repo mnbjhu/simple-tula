@@ -1,0 +1,51 @@
+start ToEnd
+default -
+
+ToEnd 0 -> ToEnd 0
+ToEnd 1 -> ToEnd 1
+ToEnd 2 -> ToEnd 2
+ToEnd 3 -> ToEnd 3
+ToEnd 4 -> ToEnd 4
+ToEnd 5 -> ToEnd 5
+ToEnd 6 -> ToEnd 6
+ToEnd 7 -> ToEnd 7
+ToEnd 8 -> ToEnd 8
+ToEnd 9 -> ToEnd 9
+ToEnd + -> ToEnd +
+ToEnd - <- Decrement -
+
+Decrement 0 <- Decrement 9
+Decrement 1 <- ToFirst 0
+Decrement 2 <- ToFirst 1
+Decrement 3 <- ToFirst 2
+Decrement 4 <- ToFirst 3
+Decrement 5 <- ToFirst 4
+Decrement 6 <- ToFirst 5
+Decrement 7 <- ToFirst 6
+Decrement 8 <- ToFirst 7
+Decrement 9 <- ToFirst 8
+Decrement + <- Halt +
+
+ToFirst 0 <- ToFirst 0
+ToFirst 1 <- ToFirst 1
+ToFirst 2 <- ToFirst 2
+ToFirst 3 <- ToFirst 3
+ToFirst 4 <- ToFirst 4
+ToFirst 5 <- ToFirst 5
+ToFirst 6 <- ToFirst 6
+ToFirst 7 <- ToFirst 7
+ToFirst 8 <- ToFirst 8
+ToFirst 9 <- ToFirst 9
+ToFirst + <- Increment +
+
+Increment 0 -> ToEnd 1
+Increment 1 -> ToEnd 2
+Increment 2 -> ToEnd 3
+Increment 3 -> ToEnd 4
+Increment 4 -> ToEnd 5
+Increment 5 -> ToEnd 6
+Increment 6 -> ToEnd 7
+Increment 7 -> ToEnd 8
+Increment 8 -> ToEnd 9
+Increment 9 <- Increment 0
+Increment - -> ToEnd 1
